@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant</title>
+    <link href="https://cdn.tailwindcss.com" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gradient-to-br from-gray-900 to-gray-800 text-white p-4 w-[400px]">
+    <div class="container mx-auto">
+        <h1 class="text-2xl font-bold mb-4 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-teal-400">AI Assistant</h1>
+        
+        <div class="flex gap-2 mb-4">
+            <select id="wordLength" class="bg-gray-700 rounded px-2 py-1 text-sm flex-1">
+                <option value="10-20">10-20 words</option>
+                <option value="20-30">20-30 words</option>
+                <option value="30-50">30-50 words</option>
+                <option value="50-100">50-100 words</option>
+            </select>
+            
+            <select id="responseType" class="bg-gray-700 rounded px-2 py-1 text-sm flex-1">
+                <option value="concise">Concise</option>
+                <option value="detailed">Detailed</option>
+            </select>
+        </div>
+
+        <div id="chat-container" class="bg-gray-800 rounded-lg p-4 mb-4 h-[300px] overflow-y-auto"></div>
+
+        <div class="flex gap-2">
+            <input type="text" id="user-input" placeholder="Type your message..." 
+                   class="flex-1 bg-gray-700 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <button id="send-btn" class="bg-blue-500 hover:bg-blue-600 rounded px-4 py-2">Send</button>
+        </div>
+
+        <div class="flex justify-between mt-4 text-sm">
+            <button id="clear-btn" class="text-gray-400 hover:text-gray-300">Clear Chat</button>
+            <button id="copy-btn" class="text-gray-400 hover:text-gray-300">Copy Last Response</button>
+        </div>
+
+        <div class="flex justify-center mt-4">
+            <button id="toggle-btn" class="bg-red-500 hover:bg-red-600 rounded px-4 py-2">Off</button>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

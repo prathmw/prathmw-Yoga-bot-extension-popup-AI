@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "AI Assistant",
+  "version": "1.0",
+  "description": "AI Assistant powered by Google's Gemini API",
+  "permissions": ["activeTab", "storage", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["styles.css"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
